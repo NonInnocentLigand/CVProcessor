@@ -12,7 +12,7 @@ After data collection, some additional processing is needed to make plots of the
 
 1. Clean up the .txt files for the sample output by the instrument, reference (ferrocene, fc, used in this example) and blank from the instrument and write a .csv file.
 2. Determine the half wave potential (E<sub>1/2</sub>), the midpoint between the cathodic (E<sub>pc</sub>) and anodic (E<sub>pa</sub>) peak potentials, of the reference molecule. 
-3. Shift the measured potentials to the literature value for fc in the experimental solvent (THF) used here.
+3. Shift the measured potentials to the known value for fc in the experimental solvent (THF) used here.
 4. Background subtraction of the baseline current.
 
 ---
