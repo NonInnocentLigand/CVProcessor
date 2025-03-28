@@ -1,4 +1,4 @@
-# Cyclic Voltammetry (CV)
+# CVProcessor
 
 ---
 
@@ -10,26 +10,35 @@ I wrote these scripts to process the data from cyclic voltammetry experiments I 
 
 After data collection, some additional processing is needed to make plots of the voltammograms and analyze the data. The scripts help with the following:
 
-1. Clean up the .txt files from the instrument and write a .csv file
-2. Determine the half wave potential (E<sub>1/2</sub>), the midpoint between the cathodic (E<sub>pc</sub>) and anodic (E<sub>pa</sub>) peak potentials, of the reference molecule (Ferrocene in this example)
-3. Reference the potentials for the measurements of the molecule of interist to that of the reference molecule and reference electrode
-4. Background subtraction of the baseline current
+1. Clean up the .txt files for the sample output by the instrument, reference (ferrocene, fc, used in this example) and blank from the instrument and write a .csv file.
+2. Determine the half wave potential (E<sub>1/2</sub>), the midpoint between the cathodic (E<sub>pc</sub>) and anodic (E<sub>pa</sub>) peak potentials, of the reference molecule. 
+3. Shift the measured potentials to the literature value for fc in the experimental solvent (THF) used here.
+4. Background subtraction of the baseline current.
 
 ---
 
 ### Example outputs
 
-Overlays of all plots from step 1.
+Step 1: Overlays of sample, fc, and blank from step 1 (left) stacked plots (right).
 
-Overlay of the reference molecule before and after correcting
+<p>
+    <img src = 'example_1.png' width='300' />
+    <img src = 'example_1a.png' width='300' />
+</p>
 
-Overlay of subject molecule before and after referencing vs the reference molecule
 
-Overlay of the background and subject molecule
 
-overlay of the background molecule following subtraction of the baseline current
+Steps 2 and 3: Overlays of the raw fc and corrected fc (left) and sample/corrected sample (right).
 
----
+<p>
+    <img src = 'example_2a.png' width='300' />
+    <img src = 'example_2.png' width='300' />
+</p>
+
+Step 4: Overlays of the sample and sample correctly referenced to SCE and blank subtracted.
+
+![overlays](example_3.png)
+
 ### Notes
 
 Feel free to modify this code to clean up your own voltammograms :)
